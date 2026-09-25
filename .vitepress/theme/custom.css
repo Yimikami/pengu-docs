@@ -117,9 +117,6 @@ html {
     background-color: transparent;
   }
 
-  .VPHome .VPHomeHero {
-    padding-bottom: 120px;
-  }
 }
 
 /**
@@ -209,15 +206,6 @@ html {
   border-radius: 0.25rem;
 }
 
-.VPHero .VPImage {
-  border-radius: 1rem;
-}
-
-.VPFeature .VPImage {
-  width: 48px;
-  height: 48px;
-  border-radius: .3rem;
-}
 
 .VPNavBar.has-sidebar .content-body {
   /* margin-left: 1.4rem; */

@@ -5,9 +5,18 @@ import { execSync } from 'node:child_process'
 
 import { sidebar } from './sidebar'
 
-const gitBranch = execSync('git rev-parse --abbrev-ref HEAD').toString().trimEnd()
+function getGitBranch() {
+  if (process.env.VERCEL_GIT_COMMIT_REF) return process.env.VERCEL_GIT_COMMIT_REF
+  try {
+    return execSync('git rev-parse --abbrev-ref HEAD', { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim()
+  } catch {
+    return 'main'
+  }
+}
+
+const gitBranch = getGitBranch()
 const isDev = gitBranch !== 'main'
-const domain = isDev ? 'pengu.dev' : 'pengu.lol'
+const domain = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL || (isDev ? 'pengu.dev' : 'pengu.lol')
 
 const meta = {
   title: 'Pengu Loader',

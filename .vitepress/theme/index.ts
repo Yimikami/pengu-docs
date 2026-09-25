@@ -20,6 +20,8 @@ export default {
   Layout: Layout,
   enhanceApp(ctx: EnhanceAppContext) {
     vitepressNprogress(ctx)
-    vitepressGoogleAnalytics('G-KX1BWHTJ9S')
+    if (typeof window !== 'undefined' && ['pengu.dev', 'pengu.lol'].includes(window.location.hostname)) {
+      vitepressGoogleAnalytics('G-KX1BWHTJ9S')
+    }
   }
 } as Theme
