@@ -45,8 +45,8 @@ Styles are scoped to the homepage; documentation uses the VitePress theme.
 - `profile-detail.webp`: an illustrative Pengu profile detail, not a community theme screenshot.
 
 Community screenshots are examples, not a guarantee of current-patch compatibility.
-Window-effect images come from the existing documentation. Anton and Barlow are
-self-hosted with their OFL license files in `public/fonts/`.
+Window-effect images come from the existing documentation. Barlow is
+self-hosted with its OFL license file in `public/fonts/`.
 
 ## Vercel demo
 

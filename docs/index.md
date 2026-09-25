@@ -6,7 +6,7 @@ description: Make your League of Legends client yours with Pengu Loader. Discove
 head:
   - - link
     - rel: preload
-      href: /fonts/anton-regular.ttf
+      href: /fonts/barlow-semibold.ttf
       as: font
       type: font/ttf
       crossorigin: ""
